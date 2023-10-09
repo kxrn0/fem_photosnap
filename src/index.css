@@ -1,0 +1,21 @@
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: demonic-sans;
+    src: url("./assets/fonts/DMSans-Regular.ttf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: demonic-sans;
+    src: url("./assets/fonts/DMSans-Bold.ttf");
+    font-weight: 700;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: demonic-sans;
+    src: url("./assets/fonts/DMSans-VariableFont_opsz_wght.ttf");
+    font-weight: 100 1000;
+  }
+}
