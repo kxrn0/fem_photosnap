@@ -12,6 +12,7 @@ const SCApp = styled.div`
   --white: 255, 255, 255;
 
   background: rgb(var(--white));
+  min-height: 100vh;
 
   .fs-h1,
   .fs-h2,
