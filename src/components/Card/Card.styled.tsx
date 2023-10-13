@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const SCCard = styled.div`
+  color: rgb(var(--white));
   position: relative;
-  background-color: red;
   width: 100%;
   transition: transform 0.33s;
 

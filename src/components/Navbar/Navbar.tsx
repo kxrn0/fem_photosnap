@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import Logo from "../../icons/Logo.tsx";
 import SCNavbar from "./Navbar.styled.tsx";
 import { ChangeEvent, useEffect, useState } from "react";
@@ -6,6 +6,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [location] = useLocation();
   const toggleClass = isMounted ? (isOpen ? "shown" : "hidden") : "";
 
   function handle_toggle(event: ChangeEvent) {
@@ -24,6 +25,10 @@ export default function Navbar() {
       document.body.style.overflowY = "";
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   return (
     <SCNavbar>

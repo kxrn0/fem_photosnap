@@ -29,12 +29,13 @@ import IconResponsive from "../../icons/IconResponsive.tsx";
 import IconInfinity from "../../icons/IconInfinity.tsx";
 import IconEmbed from "../../icons/IconEmbed.tsx";
 import SellingPoint from "../../components/SellingPoint/SellingPoint.tsx";
+import { BreakPointType } from "../../types.ts";
 
-export default function Home() {
-  const breakPoints = useMemo(
-    () => ({ desktop: 1350, tablet: 700, mobile: 500 }),
-    []
-  );
+type Props = {
+  breakPoints: BreakPointType;
+};
+
+export default function Home({ breakPoints }: Props) {
   const sectionData = useMemo(
     () => [
       {

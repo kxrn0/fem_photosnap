@@ -60,10 +60,6 @@ const SCHome = styled.div`
     img {
       width: 100%;
       height: 100%;
-
-      @media screen and (max-width: 700px) {
-        width: 100%;
-      }
     }
 
     @media screen and (max-width: 700px) {
@@ -80,7 +76,7 @@ const SCHome = styled.div`
       grid-template-rows: auto auto;
     }
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 550px) {
       display: flex;
       flex-direction: column;
     }

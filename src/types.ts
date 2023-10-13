@@ -8,3 +8,9 @@ export type ImageType = {
   tablet: ImageDetailType;
   mobile: ImageDetailType;
 };
+
+export type BreakPointType = {
+  desktop: number;
+  tablet: number;
+  mobile: number;
+};
