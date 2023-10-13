@@ -3,10 +3,10 @@ import IconInstagram from "../../icons/IconInstagram.tsx";
 import IconPinterest from "../../icons/IconPinterest.tsx";
 import IconTwitter from "../../icons/IconTwitter.tsx";
 import IconYoutube from "../../icons/IconYoutube.tsx";
+import IconArrow from "../../icons/IconArrow.tsx";
 import Logo from "../../icons/Logo.tsx";
 import { Link } from "wouter";
 import SCFooter from "./Footer.styled.tsx";
-import IconArrow from "../../icons/IconArrow.tsx";
 
 export default function Footer() {
   return (

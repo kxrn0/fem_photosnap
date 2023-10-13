@@ -53,6 +53,14 @@ const SCApp = styled.div`
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 4px;
+
+    @media screen and (max-width: 700px) {
+      &.scaled {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 3px;
+      }
+    }
   }
 
   .fs-h2 {
