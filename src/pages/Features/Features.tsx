@@ -12,12 +12,21 @@ import IconBoost from "../../icons/IconBoost.tsx";
 import IconDrag from "../../icons/IconDrag.tsx";
 import SellingPoint from "../../components/SellingPoint/SellingPoint.tsx";
 import PseudoFooter from "../../components/PseudoFooter/PseudoFooter.tsx";
+import AnHero from "../../components/AnHero/AnHero.tsx";
 
 type Props = {
   breakPoints: BreakPointType;
 };
 
 export default function Features({ breakPoints }: Props) {
+  const heroImage = useMemo(
+    () => ({
+      desktop: { src: heroDesktop, breakPoint: breakPoints.desktop },
+      tablet: { src: heroTablet, breakPoint: breakPoints.tablet },
+      mobile: { src: heroMobile, breakPoint: breakPoints.mobile },
+    }),
+    []
+  );
   const painPoints = useMemo(
     () => [
       {
@@ -62,27 +71,11 @@ export default function Features({ breakPoints }: Props) {
 
   return (
     <SCFeatures>
-      <header className="hero">
-        <div className="content">
-          <h1 className="fs-h1 scaled">features</h1>
-          <p className="fs-body-1">
-            We make sure all of our features are designed to be loved by every
-            aspiring and even professional photograpers who wanted to share
-            their stories.
-          </p>
-        </div>
-        <picture>
-          <source
-            srcSet={heroDesktop}
-            media={`(min-width: ${breakPoints.desktop}px)`}
-          />
-          <source
-            srcSet={heroTablet}
-            media={`(min-width: ${breakPoints.tablet}px)`}
-          />
-          <img src={heroMobile} alt="features" />
-        </picture>
-      </header>
+      <AnHero
+        title="features"
+        description="We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories."
+        image={heroImage}
+      />
       <section className="selling-points">
         {painPoints.map((point, index) => (
           <SellingPoint key={index} {...point} />

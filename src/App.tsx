@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Stories from "./pages/Stories/Stories";
 import Features from "./pages/Features/Features";
+import Pricing from "./pages/Pricing/Pricing";
 
 function App() {
   const [location] = useLocation();
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path="/fem_photosnap/features">
           <Features breakPoints={breakPoints} />
+        </Route>
+        <Route path="/fem_photosnap/pricing">
+          <Pricing breakPoints={breakPoints} />
         </Route>
       </Switch>
       <Footer />
