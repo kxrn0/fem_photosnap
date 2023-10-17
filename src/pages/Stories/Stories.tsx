@@ -291,7 +291,7 @@ export default function Stories({ breakPoints }: Props) {
         </picture>
         <div className="content">
           <h4 className="fs-h4">LAST MONTH’S FEATURED STORY</h4>
-          <h1 className="fs-h1">HAZY FULL MOON OF APPALACHIA</h1>
+          <h1 className="fs-h1 scaled">HAZY FULL MOON OF APPALACHIA</h1>
           <p className="fs-body-2">
             <span className="date">March 2nd 2020</span>
             <span className="author">by John Appleseed</span>
