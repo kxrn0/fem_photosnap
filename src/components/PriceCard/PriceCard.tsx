@@ -3,8 +3,9 @@ import SCPriceCard from "./PriceCard.styled.tsx";
 type Props = {
   title: string;
   description: string;
-  price: string;
-  rate: string;
+  monthlyRate: number;
+  yearlyRate: number;
+  isMonthly: boolean;
   link: string;
   isPro: boolean;
 };
@@ -12,8 +13,9 @@ type Props = {
 export default function PriceCard({
   title,
   description,
-  price,
-  rate,
+  monthlyRate,
+  yearlyRate,
+  isMonthly,
   link,
   isPro,
 }: Props) {
@@ -24,8 +26,10 @@ export default function PriceCard({
         <p className="fs-body-1">{description}</p>
       </div>
       <div className="price-container">
-        <h1 className="fs-h1">{price}</h1>
-        <p className="fs-body-1">{rate}</p>
+        <h1 className="fs-h1">
+          ${isMonthly ? monthlyRate.toFixed(2) : yearlyRate.toFixed(2)}
+        </h1>
+        <p className="fs-body-1">per {isMonthly ? "month" : "year"}</p>
       </div>
       <a
         href={link}
