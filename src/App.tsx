@@ -36,6 +36,14 @@ function App() {
         <Route path="/fem_photosnap/pricing">
           <Pricing breakPoints={breakPoints} />
         </Route>
+        <Route>
+          <div className="not-found">
+            <div className="container">
+              <h1 className="fs-h1">404</h1>
+              <h3 className="fs-h3">Not Found</h3>
+            </div>
+          </div>
+        </Route>
       </Switch>
       <Footer />
     </SCApp>

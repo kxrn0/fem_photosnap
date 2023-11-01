@@ -14,6 +14,8 @@ const SCApp = styled.div`
 
   background: rgb(var(--white));
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .fs-h1,
   .fs-h2,
@@ -168,6 +170,19 @@ const SCApp = styled.div`
       g {
         stroke: rgb(var(--white));
       }
+    }
+  }
+
+  .not-found {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
   }
 `;
